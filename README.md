@@ -1,2 +1,2 @@
 # testrepo
-## editing teh file
+## editing the file
