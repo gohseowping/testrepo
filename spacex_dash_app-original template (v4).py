@@ -23,17 +23,17 @@ app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
                                 # dcc.Dropdown(id='site-dropdown',...)
                                 html.Br(),
                                 dcc.Dropdown(
-                                    id='site-dropdown',
-                                    options=[
-                                        {'label': 'All Sites', 'value': 'ALL'},
-                                        {'label': 'CCAFSLC-40', 'value': 'CCAFS LC-40'},
-                                        {'label': 'VAFB SLC-4E', 'value': 'VAFB SLC-4E'},
-                                        {'label': 'KSC LC-39A', 'value': 'KSC LC-39A'},
-                                    ],
-                                    value='ALL',
-                                    placeholder="Select a Launch Site here",
-                                    searchable=True
-                                )
+                                                            id='site-dropdown',
+                                                            options=[
+                                                                {'label': 'All Sites', 'value': 'ALL'},
+                                                                {'label': 'CCAFSLC-40', 'value': 'CCAFS LC-40'},
+                                                                {'label': 'VAFB SLC-4E', 'value': 'VAFB SLC-4E'},
+                                                                {'label': 'KSC LC-39A', 'value': 'KSC LC-39A'},
+                                                            ],
+                                                            value='ALL',
+                                                            placeholder="Select a Launch Site here",
+                                                            searchable=True
+                                                        )
 
                                 # TASK 2: Add a pie chart to show the total successful launches count for all sites
                                 # If a specific launch site was selected, show the Success vs. Failed counts for the site
