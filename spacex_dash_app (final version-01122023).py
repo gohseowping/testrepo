@@ -100,11 +100,11 @@ def get_pie_chart(entered_site):
                                 
                                     return fig
 
-                                    @app.callback(
+@app.callback(
                                     Output(component_id='success-payload-scatter-chart', component_property='figure'),
                                     [Input(component_id='site-dropdown', component_property='value'), Input(component_id='payload-slider', component_property='value')]
                                 )
-                                    def update_scatter_chart(selected_site, selected_payload):            
+def update_scatter_chart(selected_site, selected_payload):            
                                         low, high =selected_payload
                                         mask = (spacex_df['Payload Mass (kg)'] > low) & (spacex_df['Payload Mass (kg)'] < high)
                                         filtered_df1 = spacex_df[mask]
