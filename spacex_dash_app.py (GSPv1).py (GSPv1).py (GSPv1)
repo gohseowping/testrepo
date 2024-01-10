@@ -42,23 +42,8 @@ app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
 
                                 # TASK 2: Add a pie chart to show the total successful launches count for all sites
                                 # If a specific launch site was selected, show the Success vs. Failed counts for the site
-html.Div(dcc.Graph(id='success-pie-chart')),
+ html.Div(dcc.Graph(id='success-pie-chart')),
                                 html.Br(),
-dcc.RangeSlider(
-        id='payload-slider',
-        min=0,
-        max=10000,
-        step=1000,
-        value=[0, 10000],
-        marks={
-            0: {'label': '0 kg'},
-            2500: {'label': '2500 kg'},
-            5000: {'label': '5000 kg'},
-            7500: {'label': '7500 kg'},
-            10000: {'label': '10000 kg'},
-        },
-    ),
-
 
 # Define the callback function
 @app.callback(
@@ -91,6 +76,24 @@ def update_success_pie_chart(selected_site):
                              
                                 # TASK 3: Add a slider to select payload range
                                 #dcc.RangeSlider(id='payload-slider',...)
+
+dcc.RangeSlider(
+        id='payload-slider',
+        min=0,
+        max=10000,
+        step=1000,
+        value=[0, 10000],
+        marks={
+            0: {'label': '0 kg'},
+            2500: {'label': '2500 kg'},
+            5000: {'label': '5000 kg'},
+            7500: {'label': '7500 kg'},
+            10000: {'label': '10000 kg'},
+        },
+    ),
+
+
+
 
 
 # TASK 4: Add a scatter chart to show the correlation between payload and launch success
